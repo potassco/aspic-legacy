@@ -1,0 +1,15 @@
+solve
+
+option -n 0
+
+solve
+
+option -e brave
+
+solve
+
+option -e cautious
+
+solve
+
+option -e auto

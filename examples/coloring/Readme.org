@@ -1,0 +1,27 @@
+#+Title Graph Coloring
+
+* Aspic Invocation
+  
+  Launch aspic with
+
+  % aspic -n 10 coloring.lp graph2.lp
+
+  where cl options for max numbers of models to compute ('-n <num>') can be customized,
+  and an initial graph instance (here graph2.lp) has to be provided.
+  
+* Exemplary Interaction 
+
+  Sequence of state-changing commands and queries shown in ./run.aic,
+  load within aspic with
+  ?- load run
+      
+* Files:
+  - *.aic: Loadable aspic scripts
+  - *.lp: ASP encoding
+  
+
+
+
+  
+  
+

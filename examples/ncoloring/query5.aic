@@ -1,0 +1,11 @@
+external elim(X,C) : X = 1..m, color(C)
+
+define :- edge(X,Y), elim(X,C), mark(Y,C). ?
+define :- edge(X,Y), mark(X,C), elim(Y,C). ?
+
+assert elim(2,3)
+assert elim(4,2)
+
+query mark(X,1) & elim(X,C)
+
+query mark(X,C) & elim(X,C)

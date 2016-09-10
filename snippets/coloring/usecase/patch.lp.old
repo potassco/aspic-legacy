@@ -1,0 +1,9 @@
+%* Unintended additions to be appended as cumulative part for running example *%
+
+#cumulative t.
+
+% #query mark/2.
+#external _assert_mark(X1,X2,t) : _domain_mark(X1,X2).
+
+% #define edge/2.
+#external _assert_edge(X1,X2,t) : _domain_edge(X1,X2).

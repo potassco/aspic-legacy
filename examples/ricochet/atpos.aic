@@ -1,0 +1,6 @@
+// Asserting initial robot position (default ones from the game)
+assert pos(r,1,1)
+assert pos(g,1,16)
+assert pos(b,16,1)
+assert pos(y,16,16)
+

@@ -1,0 +1,6 @@
+// Asserts default position
+assert pos(r,1,1)
+assert pos(g,1,16)
+assert pos(b,16,1)
+assert pos(y,16,16)
+

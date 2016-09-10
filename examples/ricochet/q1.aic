@@ -1,0 +1,27 @@
+////// Example queries /////
+
+// How to use:
+// 1. Uncomment query to ask
+// 2. In ASPIC shell load by entering 'load queries'
+//
+
+
+//Same coordinates, different colors
+//?- query target(red,8,11) | target(blue,8,11)
+
+
+// Same row 2 colors
+//query target(red,10,Y) | target(green,10,Y)
+//query target(blue,10,Y) | target(yellow,10,Y)
+
+// Same target coordinates for all 4 colors
+query target(C,4,7) & robot(C)
+// query target(C,12,14) & robot(C)
+// query target(C,12,13) & robot(C)
+// query target(C,11,11) & robot(C)
+// query target(C,14,14) & robot(C)
+// query target(C,16,16) & robot(C)
+// query target(C,14,16) & robot(C)
+// query target(C,16,1) & robot(C)
+// query target(C,16,5) & robot(C)
+

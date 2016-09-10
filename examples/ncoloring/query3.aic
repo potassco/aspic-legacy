@@ -1,0 +1,7 @@
+assume not mark(2,3)
+
+query mark(1,1)
+
+query mark(1,1) & [ mark(3,2) | not mark(4,2) ]
+
+cancel not mark(2,3)

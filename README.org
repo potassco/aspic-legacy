@@ -1,0 +1,72 @@
+#+TITLE: Readme ASPIC 0.1
+
+* Introduction
+
+  aspic is an interactive shell to explore ASP-encoded problems.
+
+* Installation
+  1. Add the following two paths to your PYTHONPATH environment variable:
+     '<path-to-aspic-root-dir>/'
+     '<path-to-aspic-root-dir>/lib
+
+     E.g., if the aspic src dir is rooted at /home/phil/aspic, you need
+     /home/phil/aspic/queryasp and  /home/phil/aspic/lib in PYTHONPATH
+
+     You can do this temporarily for your terminal session by entering
+     invoking 'source ./setpath.sh' in both dirs.
+
+  2. Put '<path-to-aspic-root-dir>/scripts/aspic in your PATH variable
+
+  3. Make also sure that the latest pyclingo version is in your PYTHONPATH
+
+  
+* Invocation
+
+  - Simple invocation via
+    % aspic
+
+  - With command line options and encodings to load upfront, e.g. in the
+    Ricochet example (see ./examples/ricochet/Readme.org):
+    
+     % aspic -c horizon=10 -n 6 board16-1.lp board16-ext-1.lp robots-direct.lp
+
+    where cl options for the plan horizon ('-c horizon=<num>') and max
+    numbers of models to compute ('-n <num>') can be customized.
+    
+  - All cl options via 
+    % aspic -h
+
+* Command Format
+     
+  - Commands with single atom or literal as argument; i.e., assert, retract, open,
+    assume, cancel, external; are entered as follows:
+
+    ?- <command-name> <atom>
+
+    where the atom is in gringo syntax.
+
+    E.g.: 
+    ?- assert foo(1,2,3)
+    ?- retract foo(1,2,3)
+    ?- assume not bar(c(1))
+    ?- cancel not bar(c(1))
+    ?- external in(a,b)
+    etc.
+    
+  - Commands with rule sets as arguments; i,e, define;
+    are entered as follows
+
+    ?- <command-name> <rule-set> ?
+
+    where the rules are in gringo syntax and its end has to be marked
+    by '?'. Multi-line input possible.
+    
+    E.g.
+    ?- define
+    > a :- b.
+    > c :- d.?
+     
+
+* Examples
+  - Ricochet Robots, see ./examples/ricochet/Readme.org
+  - Graph Coloring, see ./examples/coloring/Readme.org

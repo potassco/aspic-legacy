@@ -1,0 +1,61 @@
+#+Title Ricochet Robots Example
+
+* Aspic Invocation
+  
+  Launch aspic with
+
+  % aspic -c horizon=10 -n 6 board16-1.lp board16-ext-1.lp robots-direct.lp
+
+  where cl options for the plan horizon ('-c horizon=<num>') and max
+  numbers of models to compute ('-n <num>') can be customized.
+
+
+* Exemplary Interaction
+   
+   1. Preparation: assert the initial robot position, here the ones
+      from the original game are used by entering the following four
+      commands:
+      
+      ?- assert pos(r,1,1)
+      ?- assert pos(g,1,16)
+      ?- assert pos(b,16,1)
+      ?- assert pos(y,16,16)
+      
+      Alternatively to typing those in by hand, you can also
+      automatically execute them by loading the corresponding script
+      ./atpos.aic within aspic via
+
+      ?- load atpos
+
+   2. Queries
+
+      * Single target
+        ?- query target(blue,8,7)
+
+      * Same coordinates, different colors
+        ?- query target(red,8,11) | target(blue,8,11)
+
+      * Same row 2 different color
+        ?- query target(red,10,Y) | target(green,10,Y)
+
+      * Same target coordinates for all 4 colors
+        ?- query target(C,4,7) & robot(C)
+
+      More queries can be found in script './q1.aic'.Simply uncomment
+      the desired query and load within aspic via
+
+      ?- load q1
+
+   3. TBC
+
+      
+* Files:
+  - *.aic: Loadable aspic scripts
+  - *.lp: ASP encoding
+  
+
+
+
+  
+  
+

@@ -1,0 +1,15 @@
+query mark(1,1)
+
+option -n 0
+
+query mark(1,1)
+
+option -e brave
+
+query mark(1,1)
+
+option -e cautious
+
+query mark(1,1)
+
+option -e auto

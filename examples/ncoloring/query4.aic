@@ -1,0 +1,7 @@
+external mselect(X,C) : X = 1..m, color(C)
+
+define :- mselect(X,C), not mark(X,C). ?
+
+assert mselect(2,3)
+
+query mark(1,1) & [ mark(3,2) | not mark(4,2) ]

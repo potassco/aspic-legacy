@@ -1,0 +1,56 @@
+#+Title Graph Coloring
+
+* Aspic Invocation
+
+** Default
+
+   Launch aspic with
+
+   % aspic ncoloring.lp
+
+** Alternative Variant with Optional Command-Line Arguments
+  
+  Launch aspic with
+
+  % aspic -n 10 ncoloring.lp graph2.lp
+
+  with additional command-line options, such as the max numbers of
+  models to compute ('-n <num>'), and an initial graph instance (here
+  graph2.lp) to be loaded upfront. To get an overview of all available
+  command-options run
+
+  % aspic -h
+  
+* Exemplary Interactions:
+
+** IULP15 Paper Example
+   Load the example graph ('./graph.aic') and  execute a sequence of 
+   state-changing commands and queries ('./query{1..5}.aic')  within 
+   aspic by entering
+
+   ?- load graph
+
+   ?- load query1
+   ...
+   ?- load query5
+
+** Other Example Interactions: run{1,2}.aic
+
+   Sequence of state-changing commands and queries in './run{1,2}.aic',
+   load within aspic via
+
+   ?- load graph
+
+   ?- load run1  (or ?- load run2)
+
+* Files:
+  - '*.aic': Loadable aspic scripts
+    + 'query{1..5}.aic': IULP15 demo
+    + 'run{1,2}.aic': other example interactions
+    + 'graph.aic': example graph
+  - '*.lp': ASP encodings
+    + 'ncoloring.lp': n-coloring encoding
+    + 'graph.lp': example graph 'graph.aic' given as encoding
+  
+
+

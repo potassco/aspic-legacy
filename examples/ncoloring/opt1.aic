@@ -1,0 +1,19 @@
+load graph
+
+assert edge(1,2)
+
+assert edge(1,4)
+
+assert edge(2,3)
+
+assert edge(3,4)
+
+solve
+
+option --opt-mode optN
+
+filter -X,X:mark(1,X)
+
+filter on 0
+
+solve

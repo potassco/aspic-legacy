@@ -1,0 +1,5 @@
+* Query ASP v2
+
+** Snippets
+*** Ricochet Robots (./snippets/rico)
+- clingo-svn robots-direct.lp board16-1.lp pos.lp query.lp 10

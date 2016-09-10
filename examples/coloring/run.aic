@@ -1,0 +1,35 @@
+// State changing ops
+shell echo "\n*****State changing ops:"
+assert edge(1,3)
+solve
+assert icolor(1,r)
+assert icolor(4,g)
+assert icolor(3,b)
+solve
+retract icolor(1,g)
+retract icolor(4,g)
+retract icolor(3,b)
+solve
+assume icolor(1,g)
+assume icolor(4,g)
+assume icolor(3,b)
+solve
+cancel icolor(1,g)
+cancel icolor(4,g)
+cancel icolor(3,b)
+solve
+assume not icolor(1,g)
+assume not icolor(4,g)
+assume not icolor(3,b)
+solve
+retract edge(1,3)
+solve
+
+
+// Queries
+shell echo "\n*****Queries:"
+query color(1,r) & color (4,g)
+query color(1,r) & color (4,g) & [color(3,r) | color(2,b)]
+query color(1,r) & color (4,g) & [color(3,r) | color(2,b)]
+query color(1,r) & color (4,g) & [not color(3,r) & not color(2,b)]
+query color(1,r) & color (4,g) & [not color(3,r) | not color(2,b)]

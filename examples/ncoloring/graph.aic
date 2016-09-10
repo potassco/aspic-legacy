@@ -1,0 +1,4 @@
+assert edge(1,2)
+assert edge(1,4)
+assert edge(2,3)
+assert edge(3,4)
